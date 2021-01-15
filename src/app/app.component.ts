@@ -144,7 +144,7 @@ export class AppComponent {
       return; 
     }
     this.treeData.forEach((tree)=>{
-      let data = tree.filter((node)=> node.name.toUpperCase() === value.toUpperCase())
+      let data = tree.filter((node)=> node.name.toUpperCase().includes(value.toUpperCase()))
       if(Array.isArray(data) && data.length > 0){
         updatedDataSource.push(new ArrayDataSource(tree));
       }
