@@ -1,0 +1,26 @@
+.tree-node {
+    display: flex;
+    align-items: center;
+  }
+.node-element{
+  cursor: pointer;
+}
+
+
+.node-element-parent{
+  font-family: "Roboto",sans-serif;
+  text-align: left;
+  list-style: none;
+  box-sizing: border-box;
+  margin-top: 0;
+  line-height: 1.2;
+  font-size: 1rem;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+  &.isSelected{
+    color: yellowgreen !important;
+  }
+}

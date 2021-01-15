@@ -1,0 +1,22 @@
+<div class="selected-node-text">
+  {{selectedNode}}
+</div>
+<div class="mega-menu-wrapper">
+  <mat-card class="mega-menu-wrapper">
+    <div id="mega-menu">
+        <mat-form-field appearance="fill" class="input-field">
+          <input matInput #input [(ngModel)]="value" placeholder="Search..."
+          (change)="filterChanged($event)">
+        </mat-form-field>
+    </div>
+    <mat-grid-list cols="3" rowHeight="2:1">
+     <p>Please select some item in the below list:</p> 
+    <mat-grid-tile *ngFor="let dataSource of dataSources">  
+      <app-tree-flat-overlay [dataSource]='dataSource' [inputSearchText]='value' (dataSourceEmit)="handleSourceEvent($event)"></app-tree-flat-overlay>
+    </mat-grid-tile>
+  </mat-grid-list>
+  </mat-card>
+</div>
+
+
+<!-- <router-outlet></router-outlet> -->
